@@ -1,0 +1,293 @@
+AdminiSoftware/
+├── backend/
+│   ├── cmd/
+│   │   ├── adminisoftwared.go
+│   │   ├── migrate.go
+│   │   ├── worker.go
+│   │   └── backupd.go
+│   ├── internal/
+│   │   ├── api/
+│   │   │   ├── v1/
+│   │   │   │   ├── admin/
+│   │   │   │   ├── reseller/
+│   │   │   │   ├── user/
+│   │   │   │   ├── shared/
+│   │   │   │   ├── plugins/
+│   │   │   │   └── utils/
+│   │   │   └── middleware/
+│   │   ├── auth/
+│   │   │   ├── jwt.go
+│   │   │   ├── 2fa.go
+│   │   │   ├── external_providers.go
+│   │   │   └── brute_force.go
+│   │   ├── billing/
+│   │   │   ├── invoices.go
+│   │   │   ├── payments.go
+│   │   │   └── plans.go
+│   │   ├── clustering/
+│   │   │   ├── dns_cluster.go
+│   │   │   ├── node_manager.go
+│   │   │   └── remote_access.go
+│   │   ├── config/
+│   │   │   ├── config.go
+│   │   │   ├── secrets.go
+│   │   │   └── themes.go
+│   │   ├── core/
+│   │   │   ├── users.go
+│   │   │   ├── resellers.go
+│   │   │   ├── accounts.go
+│   │   │   ├── privileges.go
+│   │   │   ├── branding.go
+│   │   │   ├── packages.go
+│   │   │   ├── feature_sets.go
+│   │   │   ├── api_tokens.go
+│   │   │   └── notifications.go
+│   │   ├── dns/
+│   │   │   ├── manager.go
+│   │   │   ├── zones.go
+│   │   │   ├── templates.go
+│   │   │   └── records.go
+│   │   ├── email/
+│   │   │   ├── queue.go
+│   │   │   ├── accounts.go
+│   │   │   ├── reports.go
+│   │   │   ├── filters.go
+│   │   │   ├── spam_assassin.go
+│   │   │   └── routing.go
+│   │   ├── files/
+│   │   │   ├── manager.go
+│   │   │   ├── ftp.go
+│   │   │   └── webdisk.go
+│   │   ├── monitoring/
+│   │   │   ├── system.go
+│   │   │   ├── usage.go
+│   │   │   ├── alerts.go
+│   │   │   └── logs.go
+│   │   ├── security/
+│   │   │   ├── mod_security.go
+│   │   │   ├── csf.go
+│   │   │   ├── imunify.go
+│   │   │   ├── clamav.go
+│   │   │   ├── brute_force.go
+│   │   │   └── jailshell.go
+│   │   ├── services/
+│   │   │   ├── webserver.go
+│   │   │   ├── php_selector.go
+│   │   │   ├── nodejs_manager.go
+│   │   │   ├── db_manager.go
+│   │   │   └── redis.go
+│   │   ├── ssl/
+│   │   │   ├── auto_ssl.go
+│   │   │   ├── letsencrypt.go
+│   │   │   ├── ssl_hosts.go
+│   │   │   ├── requests.go
+│   │   │   ├── storage.go
+│   │   │   └── certs.go
+│   │   ├── stats/
+│   │   │   ├── awstats.go
+│   │   │   ├── resource.go
+│   │   │   ├── bandwidth.go
+│   │   │   └── analytics.go
+│   │   ├── system/
+│   │   │   ├── info.go
+│   │   │   ├── update.go
+│   │   │   ├── licensing.go
+│   │   │   ├── scheduler.go
+│   │   │   └── terminal.go
+│   │   ├── integrations/
+│   │   │   ├── softaculous.go
+│   │   │   ├── wp_toolkit.go
+│   │   │   ├── cloudlinux.go
+│   │   │   ├── jetbackup.go
+│   │   │   ├── mailchannels.go
+│   │   │   └── external_plugins.go
+│   │   ├── backup/
+│   │   │   ├── manager.go
+│   │   │   ├── remote.go
+│   │   │   ├── incremental.go
+│   │   │   └── restore.go
+│   │   ├── plugins/
+│   │   │   ├── loader.go
+│   │   │   ├── sdk.go
+│   │   │   └── registry.go
+│   │   ├── utils/
+│   │   │   ├── logger.go
+│   │   │   ├── validator.go
+│   │   │   ├── emailer.go
+│   │   │   └── helpers.go
+│   │   └── migration/
+│   │       ├── cpanel_import.go
+│   │       ├── webuzo_import.go
+│   │       └── migrator.go
+│   ├── models/
+│   │   ├── user.go
+│   │   ├── account.go
+│   │   ├── domain.go
+│   │   ├── dns.go
+│   │   ├── reseller.go
+│   │   ├── package.go
+│   │   ├── email.go
+│   │   ├── mailqueue.go
+│   │   ├── ftp.go
+│   │   ├── file.go
+│   │   ├── database.go
+│   │   ├── ssl.go
+│   │   ├── backup.go
+│   │   ├── stats.go
+│   │   ├── api_token.go
+│   │   ├── notification.go
+│   │   ├── system.go
+│   │   └── plugin.go
+│   ├── scripts/
+│   │   ├── run-tests.sh
+│   │   ├── migrate-db.sh
+│   │   ├── cron-clean.sh
+│   │   └── health-check.sh
+│   ├── .env.example
+│   └── go.mod
+├── frontend/
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── favicon.ico
+│   │   ├── robots.txt
+│   │   └── assets/
+│   │       ├── logos/
+│   │       ├── icons/
+│   │       └── images/
+│   ├── src/
+│   │   ├── main.js
+│   │   ├── App.vue
+│   │   ├── router/
+│   │   │   └── index.js
+│   │   ├── store/
+│   │   │   ├── index.js
+│   │   │   ├── admin.js
+│   │   │   ├── user.js
+│   │   │   ├── reseller.js
+│   │   │   └── system.js
+│   │   ├── layouts/
+│   │   │   ├── AdminCoreLayout.vue
+│   │   │   ├── ResellerLayout.vue
+│   │   │   ├── UserPanelLayout.vue
+│   │   │   └── AuthLayout.vue
+│   │   ├── views/
+│   │   │   ├── Login.vue
+│   │   │   ├── Register.vue
+│   │   │   ├── NotFound.vue
+│   │   │   ├── AdminiCore/
+│   │   │   │   ├── Dashboard.vue
+│   │   │   │   ├── Accounts/
+│   │   │   │   ├── DNS/
+│   │   │   │   ├── Email/
+│   │   │   │   ├── Files/
+│   │   │   │   ├── Packages/
+│   │   │   │   ├── Security/
+│   │   │   │   ├── Monitoring/
+│   │   │   │   ├── Plugins/
+│   │   │   │   ├── Stats/
+│   │   │   │   ├── Branding/
+│   │   │   │   ├── Backups/
+│   │   │   │   ├── Clustering/
+│   │   │   │   ├── Integrations/
+│   │   │   │   ├── Terminal/
+│   │   │   │   ├── Customization/
+│   │   │   │   └── System/
+│   │   │   ├── AdminiReseller/
+│   │   │   │   ├── Dashboard.vue
+│   │   │   │   ├── Accounts/
+│   │   │   │   ├── Packages/
+│   │   │   │   ├── Branding/
+│   │   │   │   ├── Tools/
+│   │   │   │   ├── Monitoring/
+│   │   │   │   └── Support/
+│   │   │   ├── AdminiPanel/
+│   │   │   │   ├── Dashboard.vue
+│   │   │   │   ├── Domains/
+│   │   │   │   ├── Files/
+│   │   │   │   ├── Email/
+│   │   │   │   ├── Databases/
+│   │   │   │   ├── Applications/
+│   │   │   │   ├── Security/
+│   │   │   │   ├── Stats/
+│   │   │   │   ├── Backups/
+│   │   │   │   ├── Tools/
+│   │   │   │   └── Preferences/
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   ├── forms/
+│   │   │   ├── tables/
+│   │   │   ├── charts/
+│   │   │   ├── widgets/
+│   │   │   └── modals/
+│   │   ├── plugins/
+│   │   ├── assets/
+│   │   ├── i18n/
+│   │   └── utils/
+├── plugins/
+│   ├── README.md
+│   ├── sample-plugin/
+│   │   ├── main.go
+│   │   ├── ui/
+│   │   │   └── SamplePlugin.vue
+│   │   └── manifest.json
+│   └── sdk/
+│       ├── sdk.go
+│       └── docs.md
+├── tests/
+│   ├── backend/
+│   │   ├── api/
+│   │   ├── core/
+│   │   ├── integration/
+│   │   └── e2e/
+│   ├── frontend/
+│   │   ├── unit/
+│   │   ├── e2e/
+│   │   └── integration/
+│   └── README.md
+├── docs/
+│   ├── README.md
+│   ├── architecture.md
+│   ├── extensibility.md
+│   ├── user-guide.md
+│   ├── admin-guide.md
+│   ├── api.md
+│   ├── plugins.md
+│   ├── developer.md
+│   ├── migration.md
+│   ├── integrations.md
+│   ├── security.md
+│   ├── monitoring.md
+│   └── changelog.md
+├── scripts/
+│   ├── install.sh
+│   ├── update.sh
+│   ├── backup.sh
+│   ├── restore.sh
+│   ├── migrate.sh
+│   └── dev-setup.sh
+├── cloud/
+│   ├── aws/
+│   │   ├── s3_backup.md
+│   │   ├── ec2_setup.md
+│   │   └── rds.md
+│   ├── gcp/
+│   └── azure/
+│       └── blob_storage.md
+├── config/
+│   ├── system.yaml
+│   ├── themes/
+│   └── plugins/
+├── LICENSE
+├── .env.example
+├── .gitignore
+├── README.md
+├── .editorconfig
+└── .github/
+    ├── ISSUE_TEMPLATE/
+    │   ├── bug_report.md
+    │   ├── feature_request.md
+    │   └── support.md
+    ├── workflows/
+    │   ├── ci.yml
+    │   └── cd.yml
+    └── PULL_REQUEST_TEMPLATE.md
