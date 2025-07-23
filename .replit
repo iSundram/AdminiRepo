@@ -11,4 +11,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd backend && go run cmd/adminisoftwared.go"
+args = "cd backend && go mod tidy && go mod download && go run cmd/adminisoftwared.go"
