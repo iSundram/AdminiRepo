@@ -1,4 +1,4 @@
-AdminiSoftware/
+/
 ├── backend/
 │   ├── cmd/
 │   │   ├── adminisoftwared.go
