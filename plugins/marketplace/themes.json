@@ -1,0 +1,63 @@
+
+{
+  "themes": [
+    {
+      "id": "dark-mode-pro",
+      "name": "Dark Mode Pro",
+      "version": "2.1.0",
+      "description": "Professional dark theme with customizable accent colors",
+      "author": "AdminiSoftware Team",
+      "category": "Dark Themes",
+      "price": 0,
+      "rating": 4.9,
+      "downloads": 15432,
+      "features": [
+        "Multiple accent colors",
+        "High contrast mode",
+        "Custom backgrounds",
+        "Icon customization"
+      ],
+      "compatibility": ["1.0.0+"],
+      "tags": ["dark", "professional", "customizable"],
+      "screenshots": [
+        "/assets/themes/dark-mode-pro/screenshot1.png"
+      ],
+      "downloadUrl": "https://marketplace.admini.tech/themes/dark-mode-pro-2.1.0.zip"
+    },
+    {
+      "id": "material-design",
+      "name": "Material Design",
+      "version": "1.5.2",
+      "description": "Google Material Design inspired theme",
+      "author": "Material Team",
+      "category": "Modern Themes",
+      "price": 19.99,
+      "rating": 4.7,
+      "downloads": 8765,
+      "features": [
+        "Material Design components",
+        "Smooth animations",
+        "Responsive layout",
+        "Color palette system"
+      ],
+      "compatibility": ["1.0.0+"],
+      "tags": ["material", "modern", "responsive"],
+      "screenshots": [
+        "/assets/themes/material-design/screenshot1.png"
+      ],
+      "downloadUrl": "https://marketplace.admini.tech/themes/material-design-1.5.2.zip"
+    }
+  ],
+  "categories": [
+    {
+      "id": "dark-themes",
+      "name": "Dark Themes",
+      "description": "Dark mode and night-friendly themes"
+    },
+    {
+      "id": "modern-themes",
+      "name": "Modern Themes",
+      "description": "Contemporary and stylish themes"
+    }
+  ]
+}

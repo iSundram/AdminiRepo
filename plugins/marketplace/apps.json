@@ -1,0 +1,65 @@
+
+{
+  "apps": [
+    {
+      "id": "wordpress-manager",
+      "name": "WordPress Manager",
+      "version": "3.2.1",
+      "description": "Advanced WordPress management with auto-updates and security scanning",
+      "author": "WP Solutions Inc",
+      "category": "CMS",
+      "price": 49.99,
+      "rating": 4.8,
+      "downloads": 12340,
+      "features": [
+        "One-click WordPress installation",
+        "Automatic updates",
+        "Security scanning",
+        "Performance optimization",
+        "Backup integration"
+      ],
+      "compatibility": ["1.0.0+"],
+      "tags": ["wordpress", "cms", "security", "management"],
+      "screenshots": [
+        "/assets/apps/wordpress-manager/screenshot1.png"
+      ],
+      "downloadUrl": "https://marketplace.admini.tech/apps/wordpress-manager-3.2.1.zip"
+    },
+    {
+      "id": "ecommerce-suite",
+      "name": "E-Commerce Suite",
+      "version": "2.0.5",
+      "description": "Complete e-commerce solution with payment processing",
+      "author": "Commerce Pro",
+      "category": "E-Commerce",
+      "price": 99.99,
+      "rating": 4.6,
+      "downloads": 5678,
+      "features": [
+        "Shopping cart system",
+        "Payment gateway integration",
+        "Inventory management",
+        "Order tracking",
+        "Analytics dashboard"
+      ],
+      "compatibility": ["1.0.0+"],
+      "tags": ["ecommerce", "shopping", "payments", "analytics"],
+      "screenshots": [
+        "/assets/apps/ecommerce-suite/screenshot1.png"
+      ],
+      "downloadUrl": "https://marketplace.admini.tech/apps/ecommerce-suite-2.0.5.zip"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cms",
+      "name": "Content Management",
+      "description": "CMS and content management applications"
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce",
+      "description": "Online store and e-commerce solutions"
+    }
+  ]
+}

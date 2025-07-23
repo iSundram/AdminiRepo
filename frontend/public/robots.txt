@@ -1,0 +1,7 @@
+
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+Sitemap: https://admini.tech/sitemap.xml
