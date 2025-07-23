@@ -1,0 +1,135 @@
+
+{
+  "plugins": [
+    {
+      "id": "ai-chatbot",
+      "name": "AI Customer Support Chatbot",
+      "version": "1.2.0",
+      "description": "Intelligent chatbot powered by GPT for customer support automation",
+      "author": "AdminiSoftware Team",
+      "category": "AI & Automation",
+      "price": 29.99,
+      "rating": 4.8,
+      "downloads": 15420,
+      "features": [
+        "Natural language processing",
+        "Multi-language support",
+        "Integration with ticket system",
+        "Customizable responses"
+      ],
+      "compatibility": ["1.0.0+"],
+      "tags": ["ai", "chatbot", "support", "automation"],
+      "screenshots": [
+        "/assets/plugins/ai-chatbot/screenshot1.png",
+        "/assets/plugins/ai-chatbot/screenshot2.png"
+      ],
+      "downloadUrl": "https://marketplace.admini.tech/plugins/ai-chatbot-1.2.0.zip"
+    },
+    {
+      "id": "advanced-backup",
+      "name": "Advanced Backup & Sync",
+      "version": "2.1.5",
+      "description": "Enterprise-grade backup solution with cloud sync and AI-powered scheduling",
+      "author": "BackupPro Inc.",
+      "category": "Backup & Recovery",
+      "price": 49.99,
+      "rating": 4.9,
+      "downloads": 8934,
+      "features": [
+        "Incremental backups",
+        "Multi-cloud support",
+        "AI-optimized scheduling",
+        "Encryption at rest",
+        "Point-in-time recovery"
+      ],
+      "compatibility": ["1.0.0+"],
+      "tags": ["backup", "cloud", "encryption", "ai"],
+      "screenshots": [
+        "/assets/plugins/advanced-backup/screenshot1.png"
+      ],
+      "downloadUrl": "https://marketplace.admini.tech/plugins/advanced-backup-2.1.5.zip"
+    },
+    {
+      "id": "security-scanner",
+      "name": "AI Security Scanner",
+      "version": "3.0.2",
+      "description": "Advanced malware detection and vulnerability scanning with machine learning",
+      "author": "SecureWeb Solutions",
+      "category": "Security",
+      "price": 39.99,
+      "rating": 4.7,
+      "downloads": 12567,
+      "features": [
+        "Real-time malware detection",
+        "Vulnerability assessment",
+        "Behavioral analysis",
+        "Automated remediation",
+        "Threat intelligence feeds"
+      ],
+      "compatibility": ["1.0.0+"],
+      "tags": ["security", "malware", "vulnerability", "ai"],
+      "screenshots": [
+        "/assets/plugins/security-scanner/screenshot1.png",
+        "/assets/plugins/security-scanner/screenshot2.png",
+        "/assets/plugins/security-scanner/screenshot3.png"
+      ],
+      "downloadUrl": "https://marketplace.admini.tech/plugins/security-scanner-3.0.2.zip"
+    },
+    {
+      "id": "performance-optimizer",
+      "name": "AI Performance Optimizer",
+      "version": "1.8.3",
+      "description": "Intelligent performance optimization using machine learning algorithms",
+      "author": "SpeedBoost Technologies",
+      "category": "Performance",
+      "price": 34.99,
+      "rating": 4.6,
+      "downloads": 9876,
+      "features": [
+        "Automatic cache optimization",
+        "Database query optimization",
+        "Resource allocation tuning",
+        "Predictive scaling",
+        "Performance analytics"
+      ],
+      "compatibility": ["1.0.0+"],
+      "tags": ["performance", "optimization", "cache", "ai"],
+      "screenshots": [
+        "/assets/plugins/performance-optimizer/screenshot1.png"
+      ],
+      "downloadUrl": "https://marketplace.admini.tech/plugins/performance-optimizer-1.8.3.zip"
+    }
+  ],
+  "categories": [
+    {
+      "id": "ai-automation",
+      "name": "AI & Automation",
+      "description": "Intelligent automation and AI-powered tools"
+    },
+    {
+      "id": "backup-recovery",
+      "name": "Backup & Recovery",
+      "description": "Data protection and disaster recovery solutions"
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "description": "Security enhancement and protection tools"
+    },
+    {
+      "id": "performance",
+      "name": "Performance",
+      "description": "Speed and performance optimization tools"
+    },
+    {
+      "id": "monitoring",
+      "name": "Monitoring",
+      "description": "System monitoring and analytics tools"
+    },
+    {
+      "id": "developer-tools",
+      "name": "Developer Tools",
+      "description": "Development and deployment assistance"
+    }
+  ]
+}
