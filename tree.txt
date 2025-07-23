@@ -13,17 +13,35 @@
 │   │   │   │   ├── user/
 │   │   │   │   ├── shared/
 │   │   │   │   ├── plugins/
+│   │   │   │   ├── ai/
+│   │   │   │   ├── billing/
+│   │   │   │   ├── analytics/
+│   │   │   │   ├── devops/
+│   │   │   │   ├── experimental/
 │   │   │   │   └── utils/
 │   │   │   └── middleware/
+│   │   ├── ai/
+│   │   │   ├── copilot.go
+│   │   │   ├── prediction.go
+│   │   │   ├── anomaly_detection.go
+│   │   │   ├── service_health.go
+│   │   │   └── assistant.go
+│   │   ├── automation/
+│   │   │   ├── workflows.go
+│   │   │   ├── job_queue.go
+│   │   │   └── scheduler.go
 │   │   ├── auth/
 │   │   │   ├── jwt.go
 │   │   │   ├── 2fa.go
 │   │   │   ├── external_providers.go
+│   │   │   ├── sso.go
 │   │   │   └── brute_force.go
 │   │   ├── billing/
 │   │   │   ├── invoices.go
 │   │   │   ├── payments.go
-│   │   │   └── plans.go
+│   │   │   ├── plans.go
+│   │   │   ├── promo.go
+│   │   │   └── affiliate.go
 │   │   ├── clustering/
 │   │   │   ├── dns_cluster.go
 │   │   │   ├── node_manager.go
@@ -31,7 +49,8 @@
 │   │   ├── config/
 │   │   │   ├── config.go
 │   │   │   ├── secrets.go
-│   │   │   └── themes.go
+│   │   │   ├── themes.go
+│   │   │   └── localization.go
 │   │   ├── core/
 │   │   │   ├── users.go
 │   │   │   ├── resellers.go
@@ -41,7 +60,8 @@
 │   │   │   ├── packages.go
 │   │   │   ├── feature_sets.go
 │   │   │   ├── api_tokens.go
-│   │   │   └── notifications.go
+│   │   │   ├── notifications.go
+│   │   │   └── delegation.go
 │   │   ├── dns/
 │   │   │   ├── manager.go
 │   │   │   ├── zones.go
@@ -52,42 +72,56 @@
 │   │   │   ├── accounts.go
 │   │   │   ├── reports.go
 │   │   │   ├── filters.go
-│   │   │   ├── spam_assassin.go
+│   │   │   ├── spam_ai.go
+│   │   │   ├── archiving.go
 │   │   │   └── routing.go
 │   │   ├── files/
 │   │   │   ├── manager.go
 │   │   │   ├── ftp.go
-│   │   │   └── webdisk.go
+│   │   │   ├── webdisk.go
+│   │   │   ├── object_storage.go
+│   │   │   └── snapshots.go
 │   │   ├── monitoring/
 │   │   │   ├── system.go
 │   │   │   ├── usage.go
 │   │   │   ├── alerts.go
-│   │   │   └── logs.go
+│   │   │   ├── logs.go
+│   │   │   ├── heatmaps.go
+│   │   │   └── anomaly.go
 │   │   ├── security/
 │   │   │   ├── mod_security.go
 │   │   │   ├── csf.go
 │   │   │   ├── imunify.go
 │   │   │   ├── clamav.go
 │   │   │   ├── brute_force.go
-│   │   │   └── jailshell.go
+│   │   │   ├── jailshell.go
+│   │   │   ├── ddos.go
+│   │   │   ├── geo_block.go
+│   │   │   ├── session.go
+│   │   │   └── compliance.go
 │   │   ├── services/
 │   │   │   ├── webserver.go
 │   │   │   ├── php_selector.go
 │   │   │   ├── nodejs_manager.go
 │   │   │   ├── db_manager.go
-│   │   │   └── redis.go
+│   │   │   ├── redis.go
+│   │   │   ├── container.go
+│   │   │   ├── serverless.go
+│   │   │   └── edge.go
 │   │   ├── ssl/
 │   │   │   ├── auto_ssl.go
 │   │   │   ├── letsencrypt.go
 │   │   │   ├── ssl_hosts.go
 │   │   │   ├── requests.go
 │   │   │   ├── storage.go
-│   │   │   └── certs.go
+│   │   │   ├── certs.go
+│   │   │   └── transparency.go
 │   │   ├── stats/
 │   │   │   ├── awstats.go
 │   │   │   ├── resource.go
 │   │   │   ├── bandwidth.go
-│   │   │   └── analytics.go
+│   │   │   ├── analytics.go
+│   │   │   └── heatmap.go
 │   │   ├── system/
 │   │   │   ├── info.go
 │   │   │   ├── update.go
@@ -100,16 +134,35 @@
 │   │   │   ├── cloudlinux.go
 │   │   │   ├── jetbackup.go
 │   │   │   ├── mailchannels.go
+│   │   │   ├── ecommerce.go
 │   │   │   └── external_plugins.go
 │   │   ├── backup/
 │   │   │   ├── manager.go
 │   │   │   ├── remote.go
 │   │   │   ├── incremental.go
-│   │   │   └── restore.go
+│   │   │   ├── restore.go
+│   │   │   ├── encryption.go
+│   │   │   └── cloud.go
 │   │   ├── plugins/
 │   │   │   ├── loader.go
 │   │   │   ├── sdk.go
-│   │   │   └── registry.go
+│   │   │   ├── registry.go
+│   │   │   └── marketplace.go
+│   │   ├── devops/
+│   │   │   ├── ci_cd.go
+│   │   │   ├── iac.go
+│   │   │   ├── buildpacks.go
+│   │   │   ├── deploy.go
+│   │   │   ├── gitops.go
+│   │   │   └── secrets.go
+│   │   ├── experimental/
+│   │   │   ├── blockchain_dns.go
+│   │   │   ├── decentralized_storage.go
+│   │   │   ├── quantum_tls.go
+│   │   │   ├── ar_vr.go
+│   │   │   ├── voice_assistant.go
+│   │   │   ├── federated_login.go
+│   │   │   └── web3_wallet.go
 │   │   ├── utils/
 │   │   │   ├── logger.go
 │   │   │   ├── validator.go
@@ -118,6 +171,8 @@
 │   │   └── migration/
 │   │       ├── cpanel_import.go
 │   │       ├── webuzo_import.go
+│   │       ├── plesk_import.go
+│   │       ├── directadmin_import.go
 │   │       └── migrator.go
 │   ├── models/
 │   │   ├── user.go
@@ -137,18 +192,23 @@
 │   │   ├── api_token.go
 │   │   ├── notification.go
 │   │   ├── system.go
-│   │   └── plugin.go
+│   │   ├── plugin.go
+│   │   ├── ai.go
+│   │   ├── workflow.go
+│   │   └── heatmap.go
 │   ├── scripts/
 │   │   ├── run-tests.sh
 │   │   ├── migrate-db.sh
 │   │   ├── cron-clean.sh
-│   │   └── health-check.sh
+│   │   ├── health-check.sh
+│   │   └── metrics-collector.sh
 │   ├── .env.example
 │   └── go.mod
 ├── frontend/
 │   ├── public/
 │   │   ├── index.html
 │   │   ├── favicon.ico
+│   │   ├── manifest.json
 │   │   ├── robots.txt
 │   │   └── assets/
 │   │       ├── logos/
@@ -164,12 +224,17 @@
 │   │   │   ├── admin.js
 │   │   │   ├── user.js
 │   │   │   ├── reseller.js
+│   │   │   ├── ai.js
+│   │   │   ├── analytics.js
+│   │   │   ├── billing.js
 │   │   │   └── system.js
 │   │   ├── layouts/
 │   │   │   ├── AdminCoreLayout.vue
 │   │   │   ├── ResellerLayout.vue
 │   │   │   ├── UserPanelLayout.vue
-│   │   │   └── AuthLayout.vue
+│   │   │   ├── AuthLayout.vue
+│   │   │   ├── MarketplaceLayout.vue
+│   │   │   └── ExperimentalLayout.vue
 │   │   ├── views/
 │   │   │   ├── Login.vue
 │   │   │   ├── Register.vue
@@ -191,6 +256,10 @@
 │   │   │   │   ├── Integrations/
 │   │   │   │   ├── Terminal/
 │   │   │   │   ├── Customization/
+│   │   │   │   ├── DevOps/
+│   │   │   │   ├── AI/
+│   │   │   │   ├── Automation/
+│   │   │   │   ├── Analytics/
 │   │   │   │   └── System/
 │   │   │   ├── AdminiReseller/
 │   │   │   │   ├── Dashboard.vue
@@ -211,15 +280,31 @@
 │   │   │   │   ├── Stats/
 │   │   │   │   ├── Backups/
 │   │   │   │   ├── Tools/
-│   │   │   │   └── Preferences/
+│   │   │   │   ├── Preferences/
+│   │   │   │   ├── DevOps/
+│   │   │   │   └── AI/
+│   │   │   ├── Marketplace/
+│   │   │   │   ├── Index.vue
+│   │   │   │   ├── AppDetails.vue
+│   │   │   │   ├── PluginDetails.vue
+│   │   │   │   └── ThemeDetails.vue
+│   │   │   ├── Experimental/
+│   │   │   │   ├── BlockchainDNS.vue
+│   │   │   │   ├── QuantumTLS.vue
+│   │   │   │   ├── ARVRDashboard.vue
+│   │   │   │   ├── VoiceAssistant.vue
+│   │   │   │   └── Web3Wallet.vue
 │   │   ├── components/
 │   │   │   ├── common/
 │   │   │   ├── forms/
 │   │   │   ├── tables/
 │   │   │   ├── charts/
 │   │   │   ├── widgets/
-│   │   │   └── modals/
+│   │   │   ├── modals/
+│   │   │   └── ai/
 │   │   ├── plugins/
+│   │   │   ├── SamplePlugin.vue
+│   │   │   └── PluginManager.vue
 │   │   ├── assets/
 │   │   ├── i18n/
 │   │   └── utils/
@@ -230,19 +315,26 @@
 │   │   ├── ui/
 │   │   │   └── SamplePlugin.vue
 │   │   └── manifest.json
-│   └── sdk/
-│       ├── sdk.go
-│       └── docs.md
+│   ├── sdk/
+│   │   ├── sdk.go
+│   │   └── docs.md
+│   └── marketplace/
+│       ├── plugins.json
+│       ├── themes.json
+│       └── apps.json
 ├── tests/
 │   ├── backend/
 │   │   ├── api/
 │   │   ├── core/
 │   │   ├── integration/
-│   │   └── e2e/
+│   │   ├── e2e/
+│   │   └── security/
 │   ├── frontend/
 │   │   ├── unit/
 │   │   ├── e2e/
-│   │   └── integration/
+│   │   ├── integration/
+│   │   ├── accessibility/
+│   │   └── performance/
 │   └── README.md
 ├── docs/
 │   ├── README.md
@@ -257,22 +349,33 @@
 │   ├── integrations.md
 │   ├── security.md
 │   ├── monitoring.md
-│   └── changelog.md
+│   ├── analytics.md
+│   ├── automation.md
+│   ├── ai.md
+│   ├── experimental.md
+│   ├── changelog.md
+│   └── faq.md
 ├── scripts/
 │   ├── install.sh
 │   ├── update.sh
 │   ├── backup.sh
 │   ├── restore.sh
 │   ├── migrate.sh
-│   └── dev-setup.sh
+│   ├── dev-setup.sh
+│   └── demo-data.sh
 ├── cloud/
 │   ├── aws/
 │   │   ├── s3_backup.md
 │   │   ├── ec2_setup.md
 │   │   └── rds.md
 │   ├── gcp/
-│   └── azure/
-│       └── blob_storage.md
+│   │   ├── gcs_backup.md
+│   │   └── cloud_run.md
+│   ├── azure/
+│   │   └── blob_storage.md
+│   └── digitalocean/
+│       ├── spaces.md
+│       └── droplets.md
 ├── config/
 │   ├── system.yaml
 │   ├── themes/
@@ -282,12 +385,12 @@
 ├── .gitignore
 ├── README.md
 ├── .editorconfig
-└── .github/
-    ├── ISSUE_TEMPLATE/
-    │   ├── bug_report.md
-    │   ├── feature_request.md
-    │   └── support.md
-    ├── workflows/
-    │   ├── ci.yml
-    │   └── cd.yml
-    └── PULL_REQUEST_TEMPLATE.md
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   ├── feature_request.md
+│   │   └── support.md
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   └── cd.yml
+│   └── PULL_REQUEST_TEMPLATE.md
